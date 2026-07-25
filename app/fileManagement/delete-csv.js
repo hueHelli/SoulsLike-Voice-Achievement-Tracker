@@ -11,6 +11,6 @@ exports.deleteCSV = (game) => {
     return 0;
   } catch (err) {
     console.error(err);
-    return 1;
+    return -1;
   }
 };
