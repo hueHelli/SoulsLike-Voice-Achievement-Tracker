@@ -7,7 +7,7 @@ creates a CSV file for the provided game
 returns 0 when the file was created successfully
 returns 1 if the selected game isn't available in the assets folder
 returns 2 if the file already exists
-returns 3 if an error occurred while creating the file
+returns -1 if an error occurred while creating the file
 */
 exports.createCSV = (game) => {
   const targetFolder = envPaths("SoulsLike-Voice-Achievement-Tracker");
@@ -31,6 +31,6 @@ exports.createCSV = (game) => {
     return 0;
   } catch (err) {
     console.error(err);
-    return 2;
+    return -1;
   }
 };
