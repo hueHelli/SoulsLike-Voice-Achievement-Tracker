@@ -14,10 +14,8 @@ exports.createCSV = (game) => {
   const currentPath = process.cwd();
 
   try {
-    // 1. Ensure the destination directory actually exists on disk
     fs.mkdirSync(targetFolder.config, { recursive: true });
 
-    // 2. Use path.join for safe cross-platform path resolution
     const sourceFile = path.join(currentPath, "assets", `${game}.csv`);
     const targetFile = path.join(targetFolder.config, `${game}.csv`);
 
